@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   is_digit_null.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 07:41:02 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/05 03:35:22 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/04/06 20:16:26 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/04/06 20:57:09 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long	ft_atol(const char *str)
-{
-	long	var;
-	int		i;
-	int		sign;
+#include "push_swap.h"
 
-	i = 0;
-	sign = 1;
-	var = 0;
-	if (!(str))
+int	is_digit_null_minus(char c)
+{
+	if (ft_isdigit(c) || c == 0 || ft_isminus(c))
+		return (1);
+	else
 		return (0);
-	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		var = (var * 10) + (str[i] - '0');
-		i++;
-	}
-	return (var * sign);
 }

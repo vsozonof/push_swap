@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/04/03 09:08:44 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/04/06 20:39:54 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,14 +20,21 @@ COLOUR_GREEN =\033[0;32m
 COLOUR_END =\033[0m
 
 SRCS = srcs/main.c \
+	   srcs/parsing/args_handler.c \
+	   srcs/parsing/multi_args_handler.c \
+	   srcs/parsing/single_args_handler.c \
+	   srcs/parsing/parsing_utils/head_end_checker.c \
+	   srcs/parsing/parsing_utils/str_checker.c \
+	   srcs/parsing/parsing_utils/is_digit_minus.c \
+	   srcs/parsing/parsing_utils/is_digit_null.c \
 
-SRCS_LIBFT = libft/libft.a \
+SRCS_LIBFT = lib/libft.a \
 
 all: init $(NAME)
 
 init:
 		@echo "$(COLOUR_GREEN)****** STARTING COMPILATION ******$(COLOUR_END)"
-		make all -C ./libft
+		make all -C ./lib
 
 $(NAME): $(SRCS)
 	@echo "$(COLOUR_GREEN)******    CREATING BINARY    ******$(COLOUR_END)"
@@ -35,11 +42,11 @@ $(NAME): $(SRCS)
 
 clean:
 		@echo "$(COLOUR_GREEN)****** INITIATING CLEAN  ******$(COLOUR_END)"
-		make clean -C ./libft
+		make clean -C ./lib
 		@echo "$(COLOUR_GREEN)******   CLEAN COMPLETE  ******$(COLOUR_END)"
 
 fclean: 
 		@echo "$(COLOUR_GREEN)****** INITIATING FCLEAN ******$(COLOUR_END)"
-		make fclean -C ./libft
+		make fclean -C ./lib
 		$(RM) $(NAME)
 		@echo "$(COLOUR_GREEN)******  FCLEAN COMPLETE  ******$(COLOUR_END)"

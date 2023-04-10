@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 07:44:02 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/03 07:45:49 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/07 01:03:17 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,10 @@ int	ft_int_overflow_checker(char *str)
 
 int	ft_integer_checker(char *str)
 {
-	long	max;
-	long	pid;
+	long	n;
 
-	max = INT_MAX;
-	pid = ft_atol(str);
-	if (pid > max)
+	n = ft_atol(str);
+	if (n > INT_MAX)
 		return (0);
 	return (1);
 }

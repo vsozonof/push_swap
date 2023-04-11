@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/11 02:51:53 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/11 08:05:33 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	multi_args_handler(char *argv[]);
 int	single_args_handler(char *str);
 int	head_and_end_checker(char *str);
 int	str_checker(char *str);
-int	is_wspace_null(char c);
-int	is_digit_minus(char c);
-int	is_digit_null_minus(char c);
+int	is_digit_minus_wspace(char c);
+int	charset_checker(char *str);
+int	minus_digit_checker(char *str, int index);
 
 #endif

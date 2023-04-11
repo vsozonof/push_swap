@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/04/11 02:50:34 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/04/11 07:15:45 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS = srcs/main.c \
 	   srcs/parsing/single_args_handler.c \
 	   srcs/parsing/parsing_utils/checker_utils.c \
 	   srcs/parsing/parsing_utils/str_checker.c \
+	   srcs/parsing/parsing_utils/charset_checker.c \
 
 SRCS_LIBFT = lib/libft.a \
 

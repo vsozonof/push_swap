@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 20:30:06 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/05 18:12:27 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/11 07:26:55 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@
 
 int	single_args_handler(char *str)
 {
-	if (!head_and_end_checker(str))
+	if (!charset_checker(str))
+		return (0);
+	else if (!head_and_end_checker(str))
 	{
 		ft_error_writer("Argument starts or ends with an invalid character.");
 		return (0);

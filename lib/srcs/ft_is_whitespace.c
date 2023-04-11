@@ -6,13 +6,13 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 03:40:39 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/05 03:42:05 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/11 07:23:17 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_whitespace(char c)
 {
-	if (c >= 9 || c <= 13)
+	if ((c >= 9 && c <= 13) || c == ' ')
 		return (1);
 	return (0);
 }

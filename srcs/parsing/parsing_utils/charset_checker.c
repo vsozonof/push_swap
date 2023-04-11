@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   charset_checker.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 09:05:15 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/11 07:14:46 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/04/11 07:03:48 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/04/11 07:23:58 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+int	charset_checker(char *str)
 {
-	if (argc == 1)
-		ft_error_writer("Not enough arguments.");
-	if (!args_handler(argc, argv))
-		return (0);
-	ft_printf("Arg OK\n");
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!is_digit_minus_wspace(str[i]))
+		{
+			ft_error_writer("An invalid character was detected.\n");
+			ft_printf("%i", str[i]);
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }

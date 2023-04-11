@@ -6,35 +6,15 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 18:31:39 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/11 02:51:42 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/11 07:09:12 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	is_digit_minus(char c)
+int	is_digit_minus_wspace(char c)
 {
-	if (!ft_isdigit(c) && !ft_isminus(c))
-	{
-		ft_error_writer("Invalid character detected.");
-		ft_printf("%c\n", c);
-		return (0);
-	}
-	else
-		return (1);
-}
-
-int	is_digit_null_minus(char c)
-{
-	if (ft_isdigit(c) || c == 0 || ft_isminus(c))
-		return (1);
-	else
-		return (0);
-}
-
-int	is_wspace_null(char c)
-{
-	if (ft_is_whitespace(c) || c == 0)
+	if (ft_isdigit(c) || ft_is_whitespace(c) || ft_isminus(c))
 		return (1);
 	else
 		return (0);

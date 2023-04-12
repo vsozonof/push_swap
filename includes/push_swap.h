@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/12 10:09:16 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/12 13:37:49 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int	is_digit_minus_wspace(char c);
 int	charset_checker(char *str);
 int	is_wspace_null(char c);
 int	digits_checker(char *str);
+int	overflow_checker(char **stash);
 
 #endif

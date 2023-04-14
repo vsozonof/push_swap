@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   digits_checker.c                                   :+:      :+:    :+:   */
+/*   m_str_checker.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 09:55:19 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/12 13:50:05 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/04/14 09:56:22 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/04/14 11:16:22 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	digits_checker(char *str)
+int	m_str_checker(char **stash)
 {
-	char	**digits_stash;
+	int	j;
+	int	i;
 
-	digits_stash = ft_split(str, ' ');
-	if (!overflow_checker(digits_stash))
-		return (0);
-	return (1);
-}
-
-int	overflow_checker(char **stash)
-{
-	int		i;
-	int		j;
-
-	i = 0;
+	i = 1;
 	j = 0;
 	while (stash[i])
 	{
-		if (!ft_int_overflow_checker(stash[i]))
-			return (0);
-		else
-			i++;
+		while (stash[i][j])
+		{
+			if (ft_isminus(stash[i][j]) && !ft_isdigit(stash[i][j + 1]))
+				return (pr_error("Invalid character after a sign detected."));
+			else
+				j++;
+			while (ft_isdigit(stash[i][j]))
+				j++;
+			if (stash[i][j] != '\0')
+				return (pr_error("Invalid characters passed as argument."));
+		}
+		i++;
+		j = 0;
 	}
 	return (1);
 }

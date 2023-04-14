@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/04/12 09:55:47 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/04/14 10:46:16 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,12 @@ SRCS = srcs/main.c \
 	   srcs/parsing/args_handler.c \
 	   srcs/parsing/multi_args_handler.c \
 	   srcs/parsing/single_args_handler.c \
-	   srcs/parsing/single_args_utils/checker_utils.c \
-	   srcs/parsing/single_args_utils/str_checker.c \
-	   srcs/parsing/single_args_utils/charset_checker.c \
-	   srcs/parsing/single_args_utils/digits_checker.c \
+	   srcs/parsing/single_args_utils/s_checker_utils.c \
+	   srcs/parsing/single_args_utils/s_str_checker.c \
+	   srcs/parsing/single_args_utils/s_charset_checker.c \
+	   srcs/parsing/single_args_utils/s_digits_checker.c \
+	   srcs/parsing/single_args_utils/s_duplicate_checker.c \
+	   srcs/parsing/multi_args_utils/m_str_checker.c \
 
 SRCS_LIBFT = lib/libft.a \
 
@@ -50,3 +52,7 @@ fclean:
 		make fclean -C ./lib
 		$(RM) $(NAME)
 		@echo "$(COLOUR_GREEN)******  FCLEAN COMPLETE  ******$(COLOUR_END)"
+
+re: fclean all
+
+.PHONY: all clean fclean init re

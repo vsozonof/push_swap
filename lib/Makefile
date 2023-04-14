@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/09 21:19:51 by vsozonof          #+#    #+#              #
-#    Updated: 2023/04/05 04:59:00 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/04/14 04:59:29 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,7 @@ SRCS = 	srcs/ft_isalpha.c\
 		srcs/ft_is_str_digit.c \
 		srcs/ft_is_whitespace.c \
 		srcs/ft_isminus.c \
+		srcs/ft_split_free.c \
 
 		
 OBJS = $(SRCS:.c=.o)

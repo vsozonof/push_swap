@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/04/17 06:52:50 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/04/17 12:44:16 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,13 @@ SRCS = srcs/main.c \
 	   srcs/parsing/single_args_utils/s_duplicate_checker.c \
 	   srcs/parsing/multi_args_utils/m_str_checker.c \
 	   srcs/parsing/multi_args_utils/m_digits_checker.c \
+	   srcs/lists/ft_add_at.c \
+	   srcs/lists/ft_create_cell.c \
+	   srcs/lists/ft_get_at.c \
+	   srcs/lists/ft_free_at.c \
+	   srcs/lists/ft_free_list.c \
+	   srcs/lists/ft_list_len.c \
+	   srcs/lists/ft_print_list.c \
 
 SRCS_LIBFT = lib/libft.a \
 

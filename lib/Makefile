@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/09 21:19:51 by vsozonof          #+#    #+#              #
-#    Updated: 2023/04/14 04:59:29 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/04/17 11:11:17 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,64 +20,68 @@ RM = rm -f
 COLOUR_GREEN=\033[0;32m
 COLOUR_END=\033[0m
 
-SRCS = 	srcs/ft_isalpha.c\
-		srcs/ft_isdigit.c\
-		srcs/ft_isalnum.c\
-		srcs/ft_isascii.c\
-		srcs/ft_isprint.c\
-		srcs/ft_toupper.c\
-		srcs/ft_tolower.c\
-		srcs/ft_strchr.c\
-		srcs/ft_strrchr.c\
-		srcs/ft_strnstr.c\
-		srcs/ft_strncmp.c\
-		srcs/ft_strlen.c\
-		srcs/ft_strlcpy.c\
-		srcs/ft_strlcat.c\
-		srcs/ft_strdup.c\
-		srcs/ft_memcpy.c\
-		srcs/ft_memset.c\
-		srcs/ft_memmove.c\
-		srcs/ft_memchr.c\
-		srcs/ft_memcmp.c\
-		srcs/ft_bzero.c\
-		srcs/ft_atoi.c\
-		srcs/ft_calloc.c\
-		srcs/ft_itoa.c\
-		srcs/ft_putchar_fd.c\
-		srcs/ft_putnbr_fd.c\
-		srcs/ft_putstr_fd.c\
-		srcs/ft_putendl_fd.c\
-		srcs/ft_striteri.c\
-		srcs/ft_strmapi.c\
-		srcs/ft_substr.c\
-		srcs/ft_strjoin.c\
-		srcs/ft_strtrim.c\
-		srcs/ft_split.c\
-		srcs/ft_lstnew.c\
-		srcs/ft_lstsize.c\
-		srcs/ft_lstlast.c\
-		srcs/ft_lstadd_front.c\
-		srcs/ft_lstadd_back.c\
-		srcs/ft_lstdelone.c\
-		srcs/ft_lstiter.c\
-		srcs/ft_lstclear.c\
-		srcs/ft_lstmap.c\
-		srcs/ft_putstr.c \
-		srcs/ft_putnbr.c \
-		srcs/ft_putnbr_hexa.c \
-		srcs/ft_strlen.c \
-		srcs/ft_pointer_handler.c \
-		srcs/ft_printf.c \
-		srcs/gnl.c \
-		srcs/gnl_utils.c \
-		srcs/ft_atol.c \
-		srcs/ft_error_writer.c \
-		srcs/ft_int_overflow_checker.c \
-		srcs/ft_is_str_digit.c \
-		srcs/ft_is_whitespace.c \
-		srcs/ft_isminus.c \
-		srcs/ft_split_free.c \
+SRCS = 	srcs/bool_functions/ft_isalpha.c\
+		srcs/bool_functions/ft_isdigit.c\
+		srcs/bool_functions/ft_isalnum.c\
+		srcs/bool_functions/ft_isascii.c\
+		srcs/bool_functions/ft_isprint.c\
+		srcs/bool_functions/ft_int_overflow_checker.c \
+		srcs/bool_functions/ft_is_str_digit.c \
+		srcs/bool_functions/ft_is_whitespace.c \
+		srcs/bool_functions/ft_isminus.c \
+		srcs/str_functions/ft_toupper.c\
+		srcs/str_functions/ft_tolower.c\
+		srcs/str_functions/ft_striteri.c\
+		srcs/str_functions/ft_strmapi.c\
+		srcs/str_functions/ft_substr.c\
+		srcs/str_functions/ft_strjoin.c\
+		srcs/str_functions/ft_strtrim.c\
+		srcs/str_functions/ft_split.c\
+		srcs/str_functions/ft_atol.c \
+		srcs/str_functions/ft_split_free.c \
+		srcs/str_functions/ft_strlen.c \
+		srcs/str_functions/ft_itoa.c\
+		srcs/str_functions/ft_atoi.c\
+		srcs/str_functions/ft_strchr.c\
+		srcs/str_functions/ft_strrchr.c\
+		srcs/str_functions/ft_strnstr.c\
+		srcs/str_functions/ft_strncmp.c\
+		srcs/str_functions/ft_strlen.c\
+		srcs/str_functions/ft_strlcpy.c\
+		srcs/str_functions/ft_strlcat.c\
+		srcs/str_functions/ft_strdup.c\
+		srcs/str_functions/gnl.c \
+		srcs/str_functions/gnl.c \
+		srcs/str_functions/gnl_utils.c \
+		srcs/str_functions/gnl_utils.c \
+		srcs/list_functions/ft_lstnew.c\
+		srcs/list_functions/ft_lstsize.c\
+		srcs/list_functions/ft_lstlast.c\
+		srcs/list_functions/ft_lstadd_front.c\
+		srcs/list_functions/ft_lstadd_back.c\
+		srcs/list_functions/ft_lstdelone.c\
+		srcs/list_functions/ft_lstiter.c\
+		srcs/list_functions/ft_lstclear.c\
+		srcs/list_functions/ft_lstmap.c\
+		srcs/writing_functions/ft_putchar_fd.c\
+		srcs/writing_functions/ft_putnbr_fd.c\
+		srcs/writing_functions/ft_putstr_fd.c\
+		srcs/writing_functions/ft_putendl_fd.c\
+		srcs/writing_functions/ft_putstr.c \
+		srcs/writing_functions/ft_putnbr.c \
+		srcs/writing_functions/ft_putnbr_hexa.c \
+		srcs/writing_functions/ft_pointer_handler.c \
+		srcs/writing_functions/ft_printf.c \
+		srcs/writing_functions/ft_error_writer.c \
+		srcs/memory_functions/ft_memcpy.c\
+		srcs/memory_functions/ft_memset.c\
+		srcs/memory_functions/ft_memmove.c\
+		srcs/memory_functions/ft_memchr.c\
+		srcs/memory_functions/ft_memcmp.c\
+		srcs/memory_functions/ft_bzero.c\
+		srcs/memory_functions/ft_calloc.c\
+		
+
 
 		
 OBJS = $(SRCS:.c=.o)

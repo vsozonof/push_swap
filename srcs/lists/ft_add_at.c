@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   multi_args_handler.c                               :+:      :+:    :+:   */
+/*   ft_add_at.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 20:30:09 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/17 07:18:29 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/04/17 10:26:18 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/04/17 12:42:04 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	multi_args_handler(char **stash)
+t_list	*addat(t_list *L, int data, int pos)
 {
-	int	i;
+	t_list	*prec;
+	t_list	*cur;
+	int		i;
+	t_list	*cell;
 
-	i = 1;
-	while (stash[i])
+	cur = L;
+	prec = L;
+	i = 0;
+	cell = createcell(data);
+	if (isemptylist(L))
+		return (cell);
+	if (pos == 0)
 	{
-		if (!head_and_end_checker(stash[i]))
-			return (pr_error("Argument starts/ends with an invalid character"));
-		else
-			i++;
+		cell->next = L;
+		return (cell);
 	}
-	if (!m_str_checker(stash))
-		return (0);
-	else if (!m_digits_dupes_checker(stash))
-		return (0);
-	return (1);
+	while (i < pos)
+	{
+		i++;
+		prec = cur;
+		cur = cur->next;
+	}
+	prec->next = cell;
+	cell->next = cur;
+	return (L);
 }

@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/17 06:53:05 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/17 12:51:19 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,24 @@ int	m_str_checker(char **stash);
 int	m_digits_dupes_checker(char **stash);
 int	m_overflow_checker(char **stash);
 
+//------------------------------------------------------------------------------
+//							--- Linked List Manipulation ---
+//------------------------------------------------------------------------------
+
+// typedef struct s_list
+// {
+// 	int				data;
+// 	struct s_list	*next;
+// }	t_list;
+
+// t_list	*emptylist(void);
+// int		isemptylist(t_list *L);
+// long	lenlist(t_list *L);
+// t_list	*addat(t_list *L, int n1, int n2);
+// int		getat(t_list *L, int n);
+// void	setat(t_list *L, int n1, int n2);
+// t_list	*freeat(t_list *L, int n);
+// t_list	*freelist(t_list *L);
+// void	printlist(t_list *L);
 
 #endif

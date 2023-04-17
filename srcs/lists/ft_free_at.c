@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   multi_args_handler.c                               :+:      :+:    :+:   */
+/*   ft_free_at.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 20:30:09 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/17 07:18:29 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/04/17 10:28:53 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/04/17 12:42:15 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	multi_args_handler(char **stash)
+t_list *freeat(t_list *L, int pos)
 {
-	int	i;
+	t_list	*prec;
+	t_list	*cur;
+	int		i;
 
-	i = 1;
-	while (stash[i])
+	cur = L;
+	prec = L;
+	i = 0;
+	if (pos == 0)
 	{
-		if (!head_and_end_checker(stash[i]))
-			return (pr_error("Argument starts/ends with an invalid character"));
-		else
-			i++;
+		L = L->next;
+		free(cur);
+		return (NULL);
 	}
-	if (!m_str_checker(stash))
-		return (0);
-	else if (!m_digits_dupes_checker(stash))
-		return (0);
-	return (1);
+	while (i < pos)
+	{
+		i++;
+		prec = cur;
+		cur = cur->next;
+	}
+	prec->next = cur->next;
+	free(cur);
+	return (L);
 }

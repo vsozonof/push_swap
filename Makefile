@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/04/14 10:46:16 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/04/17 06:52:50 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS = srcs/main.c \
 	   srcs/parsing/single_args_utils/s_digits_checker.c \
 	   srcs/parsing/single_args_utils/s_duplicate_checker.c \
 	   srcs/parsing/multi_args_utils/m_str_checker.c \
+	   srcs/parsing/multi_args_utils/m_digits_checker.c \
 
 SRCS_LIBFT = lib/libft.a \
 

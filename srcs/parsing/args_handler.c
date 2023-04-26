@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 20:03:19 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/14 10:52:44 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/26 17:33:57 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 
 //------------------------------------------------------------------------------
 
-int	args_handler(int n, char *args[])
+int	args_handler(int n, char *args[], t_list *stacks)
 {
 	if (n == 2)
-		return (single_args_handler(args[1]));
+		return (single_args_handler(args[1], stacks));
 	else
 		return (multi_args_handler(args));
 }

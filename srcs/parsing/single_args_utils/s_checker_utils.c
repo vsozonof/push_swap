@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_utils.c                                    :+:      :+:    :+:   */
+/*   s_checker_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 18:31:39 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/12 09:37:50 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/20 13:04:38 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ int	is_wspace_null(char c)
 int	head_and_end_checker(char *str)
 {
 	if (!ft_isdigit(str[0]) && !ft_isminus(str[0]))
-		return (0);
+		return (pr_error("The argument starts/ends with an invalid character"));
 	else if (!ft_isdigit(str[ft_strlen(str) - 1]))
-		return (0);
+		return (pr_error("The argument starts/ends with an invalid character"));
 	else
 		return (1);
 }

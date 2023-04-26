@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 09:05:15 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/26 17:55:54 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/04/17 10:27:14 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/04/26 15:28:47 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+long	ft_lstlen_a(t_list_a *L)
 {
-	t_list	*stacks;
+	long	len;
 
-	stacks->a = ft_create_cell_a(NULL);
-	stacks->b = ft_create_cell_b(NULL);
-	if (argc == 1)
-		pr_error("Not enough arguments.");
-	if (!args_handler(argc, argv, stacks))
-		return (0);
-	ft_printf("Arg OK\n");
+	len = 0;
+	while (L)
+	{
+		len++;
+		L = L->next;
+	}
+	return (len);
+}
+
+long	ft_lstlen_b(t_list_b *L)
+{
+	long	len;
+
+	len = 0;
+	while (L)
+	{
+		len++;
+		L = L->next;
+	}
+	return (len);
 }

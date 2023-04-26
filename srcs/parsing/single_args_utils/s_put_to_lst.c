@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   s_put_to_lst.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 09:05:15 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/26 17:55:54 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/04/20 13:31:14 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/04/26 15:40:53 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char *argv[])
+int	s_put_to_lst(char **stash, t_list *stacks)
 {
-	t_list	*stacks;
+	int	i;
+	int	j;
 
-	stacks->a = ft_create_cell_a(NULL);
-	stacks->b = ft_create_cell_b(NULL);
-	if (argc == 1)
-		pr_error("Not enough arguments.");
-	if (!args_handler(argc, argv, stacks))
-		return (0);
-	ft_printf("Arg OK\n");
+	i = 0;
+	j = 0;
+	while (stash[i])
+	{
+		ft_add_at_a(stacks->a_next, ft_atoi(stash[i]), j);
+		if (!stacks->a_next)
+			return (0);
+		j++;
+		i++;
+	}
+	return (1);
 }

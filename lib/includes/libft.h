@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 22:14:34 by vsozonoff         #+#    #+#             */
-/*   Updated: 2023/04/17 12:51:00 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/20 13:26:22 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_bzero(void *s, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
-void	ft_split_free(char **str);
+int		ft_split_free(char **str);
 int		pr_error(char *error);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
@@ -70,21 +70,22 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 long	ft_atol(const char *str);
 
-typedef struct s_list
+typedef struct s_lst
 {
 	void				*content;
-	struct s_list		*next;
-}						t_list;
+	int					data;
+	struct s_lst		*next;
+}						t_lst;
 
-t_list	*ft_lstnew(void *content);
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
+t_lst	*ft_lstnew(void *content);
+t_lst	*ft_lstlast(t_lst *lst);
+t_lst	*ft_lstmap(t_lst *lst, void *(*f)(void *), void (*del)(void *));
+void	ft_lstdelone(t_lst *lst, void (*del)(void *));
+void	ft_lstclear(t_lst **lst, void (*del)(void *));
+void	ft_lstiter(t_lst *lst, void (*f)(void *));
+void	ft_lstadd_front(t_lst **lst, t_lst *new);
+void	ft_lstadd_back(t_lst **lst, t_lst *new);
+int		ft_lstsize(t_lst *lst);
 
 // PRINTF Functions
 int		ft_printf(const char *str, ...);

@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 20:30:06 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/14 10:40:10 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/26 15:47:14 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,21 @@
 
 //------------------------------------------------------------------------------
 
-int	single_args_handler(char *str)
+int	single_args_handler(char *str, t_list *stacks)
 {
 	char	**stash;
 
 	stash = ft_split(str, ' ');
 	if (!s_charset_checker(str))
-		return (0);
+		return (ft_split_free(stash));
 	else if (!head_and_end_checker(str))
-		return (pr_error("Argument starts or ends with an invalid character."));
+		return (ft_split_free(stash));
 	else if (!s_str_checker(str))
-		return (0);
+		return (ft_split_free(stash));
 	else if (!s_digits_dupes_checker(stash))
 		return (0);
+	else if (!s_put_to_lst(stash, stacks))
+		return (0);
+	ft_split_free(stash);
 	return (1);
 }

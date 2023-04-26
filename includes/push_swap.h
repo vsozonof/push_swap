@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/17 12:51:19 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/26 15:50:41 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,37 @@
 # include "../lib/includes/libft.h"
 
 //------------------------------------------------------------------------------
+//							--- Linked List Declaration ---
+//------------------------------------------------------------------------------
+
+typedef struct s_list_a
+{
+	int				data;
+	struct s_list_a	*next;
+}					t_list_a;
+
+typedef struct s_list_b
+{
+	int				data;
+	struct s_list_b	*next;
+}					t_list_b;
+
+typedef struct s_lists
+{
+	struct s_list_a	*a;
+	struct s_list_b	*b;
+}					t_list;
+
+//------------------------------------------------------------------------------
 //							--- Arguments Verifications ---
 //------------------------------------------------------------------------------
 
 //					  --- General Args Verification Functions ---
 //------------------------------------------------------------------------------
 
-int	args_handler(int n, char *args[]);
+int	args_handler(int n, char *args[], t_list *stacks);
 int	multi_args_handler(char **stash);
-int	single_args_handler(char *str);
+int	single_args_handler(char *str, t_list *stacks);
 
 // 							--- Single Arg Verification ---
 //------------------------------------------------------------------------------
@@ -44,25 +66,31 @@ int	s_duplicate_checker(char **stash);
 int	m_str_checker(char **stash);
 int	m_digits_dupes_checker(char **stash);
 int	m_overflow_checker(char **stash);
+int	m_duplicate_checker(char **stash);
 
 //------------------------------------------------------------------------------
 //							--- Linked List Manipulation ---
 //------------------------------------------------------------------------------
 
-// typedef struct s_list
-// {
-// 	int				data;
-// 	struct s_list	*next;
-// }	t_list;
+//							--- Linked List Functions ---
+//------------------------------------------------------------------------------
 
-// t_list	*emptylist(void);
-// int		isemptylist(t_list *L);
-// long	lenlist(t_list *L);
-// t_list	*addat(t_list *L, int n1, int n2);
-// int		getat(t_list *L, int n);
-// void	setat(t_list *L, int n1, int n2);
-// t_list	*freeat(t_list *L, int n);
-// t_list	*freelist(t_list *L);
-// void	printlist(t_list *L);
+int			s_put_to_lst(char **stash, t_list *stacks);
+void		ft_set_at_a(t_list_a *L, int data, int pos);
+void		ft_set_at_b(t_list_b *L, int data, int pos);
+void		ft_printlst_a(t_list_a *L);
+void		ft_printlst_b(t_list_b *L);
+long		ft_lstlen_a(t_list_a *L);
+long		ft_lstlen_b(t_list_b *L);
+int			ft_get_at_a(t_list_a *L, int pos);
+int			ft_get_at_b(t_list_b *L, int pos);
+t_list_a	*ft_freelist_a(t_list_a *L);
+t_list_b	*ft_freelist_b(t_list_b *L);
+t_list_a	*ft_free_at_a(t_list_a *L, int pos);
+t_list_b	*ft_free_at_b(t_list_b *L, int pos);
+t_list_a	*ft_create_cell_a(int data);
+t_list_b	*ft_create_cell_b(int data);
+t_list_a	*ft_add_at_a(t_list_a *L, int data, int pos);
+t_list_b	*ft_add_at_b(t_list_b *L, int data, int pos);
 
 #endif

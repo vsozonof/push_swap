@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 06:48:12 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/17 06:53:15 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/20 13:14:29 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	m_digits_dupes_checker(char **stash)
 {
 	if (!m_overflow_checker(stash))
 		return (0);
-	else if (!s_duplicate_checker(stash))
+	else if (!m_duplicate_checker(stash))
 		return (0);
 	return (1);
 }

@@ -6,13 +6,13 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:58:47 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/14 10:04:12 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/28 11:26:43 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_split_free(char **str)
+int	ft_split_free(char **str)
 {
 	int	i;
 
@@ -20,4 +20,5 @@ void	ft_split_free(char **str)
 	while (str[++i])
 		free(str[i]);
 	free(str);
+	return (0);
 }

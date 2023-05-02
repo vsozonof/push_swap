@@ -6,16 +6,16 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 03:07:21 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/24 08:29:02 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/28 11:28:54 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_lst	*ft_lstmap(t_lst *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_lst;
-	t_list	*new_element;
+	t_lst	*new_lst;
+	t_lst	*new_element;
 
 	if (!(lst) || !(f) || !(del))
 		return (NULL);

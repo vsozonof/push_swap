@@ -6,13 +6,13 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 16:58:38 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/25 10:28:52 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/28 11:28:38 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_lst	*ft_lstlast(t_lst *lst)
 {
 	if (!lst)
 		return (NULL);

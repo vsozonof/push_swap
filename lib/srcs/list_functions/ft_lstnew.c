@@ -6,17 +6,17 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 18:00:36 by vsozonof          #+#    #+#             */
-/*   Updated: 2022/11/22 18:14:12 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/04/28 11:29:05 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_lst	*ft_lstnew(void *content)
 {
-	t_list	*data;
+	t_lst	*data;
 
-	data = malloc(sizeof(t_list));
+	data = malloc(sizeof(t_lst));
 	if (!data)
 		return (NULL);
 	data->content = content;

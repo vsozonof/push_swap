@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 13:31:14 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/26 15:40:53 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/05/02 13:57:58 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 int	s_put_to_lst(char **stash, t_list *stacks)
 {
-	int	i;
-	int	j;
+	int			i;
+	t_list_a	*stack_a;
 
+	stack_a = stacks->a;
 	i = 0;
-	j = 0;
 	while (stash[i])
 	{
-		ft_add_at_a(stacks->a_next, ft_atoi(stash[i]), j);
-		if (!stacks->a_next)
-			return (0);
-		j++;
+		stack_a = ft_add_at_a(stack_a, ft_atoi(stash[i]), i);
 		i++;
 	}
+	stacks->a = stack_a;
 	return (1);
 }

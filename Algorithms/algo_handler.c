@@ -1,43 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   s_digits_checker.c                                 :+:      :+:    :+:   */
+/*   algo_handler.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 09:55:19 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/17 06:51:51 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/05/07 14:37:04 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/05/07 15:31:03 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	s_digits_dupes_checker(char **stash)
+void	algo_handler(t_list *stacks)
 {
-	if (!s_overflow_checker(stash))
-	{
-		ft_split_free(stash);
-		return (0);
-	}
-	else if (!s_duplicate_checker(stash))
-	{
-		ft_split_free(stash);
-		return (0);
-	}
-	return (1);
-}
-
-int	s_overflow_checker(char **stash)
-{
-	int		i;
-
-	i = 0;
-	while (stash[i])
-	{
-		if (!ft_int_overflow_checker(stash[i]))
-			return (0);
-		else
-			i++;
-	}
-	return (1);
+	ft_printf("STACK A before SA\n");
+	ft_printlst_a(stacks->a);
+	sa(stacks);
+	ft_printf("STACK A after SA\n");
+	ft_printlst_a(stacks->a);
+	ft_freelist_a(stacks->a);
 }

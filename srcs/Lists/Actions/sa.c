@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   args_handler.c                                     :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 20:03:19 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/26 17:33:57 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/05/07 14:05:55 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/05/07 16:18:08 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 //------------------------------------------------------------------------------
-//							--- Args Format Identifyer ---
+//								--- Swap A ---
 //------------------------------------------------------------------------------
 
-// This function will is used to call 2 other functions depending on
-// the format input.
-// "X X X X X" or "X" "X" "X" "X"
+// sa (swap a): Swap the first 2 elements at the top of stack a.
+// Do nothing if there is only one or no elements.
 
 //------------------------------------------------------------------------------
 
-int	args_handler(int n, char *args[], t_list *stacks)
+void	sa(t_list *stacks)
 {
-	if (n == 2)
-		return (single_args_handler(args[1], stacks));
-	else
-		return (multi_args_handler(args));
+	t_list_a	*first;
+	t_list_a	*second;
+
+	if (!stacks->a || ft_lstlen_a(stacks->a) == 1)
+		return ;
+	first = stacks->a;
+	second = 
+	*first->next = second->next;
+	second->next = first;
 }

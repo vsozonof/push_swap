@@ -6,11 +6,22 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 06:48:12 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/20 13:14:29 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/05/06 16:29:40 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+//------------------------------------------------------------------------------
+//						--- Digits and Duplicates Checker ---
+//------------------------------------------------------------------------------
+
+// The digits_dupes_checker function will call two other functions to check if :
+//
+// 1. The integer passed as arguments will overflow or not.
+// 2. Any duplicate of an integer are detected.
+
+//------------------------------------------------------------------------------
 
 int	m_digits_dupes_checker(char **stash)
 {

@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m_duplicate_checker.c                              :+:      :+:    :+:   */
+/*   s_duplicate_checker.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 13:12:24 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/20 13:14:07 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/04/12 13:56:43 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/05/06 16:55:22 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	m_duplicate_checker(char **stash)
+//------------------------------------------------------------------------------
+//							--- Duplicates Checker ---
+//------------------------------------------------------------------------------
+
+// The duplicate checker function will detect if a duplicate of an integer was
+// passed as arguments.
+
+//------------------------------------------------------------------------------
+
+int	s_duplicate_checker(char **stash)
 {
 	int	i;
 	int	j;
 
-	i = 1;
-	j = 1;
+	i = 0;
+	j = 0;
 	while (stash[i])
 	{
 		while (stash[j])
@@ -27,7 +36,7 @@ int	m_duplicate_checker(char **stash)
 				return (pr_error("A duplicate has been detected."));
 			j++;
 		}
-		j = 1;
+		j = 0;
 		i++;
 	}
 	return (1);

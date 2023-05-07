@@ -6,11 +6,20 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 09:56:22 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/14 11:16:22 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/05/06 16:54:29 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+//------------------------------------------------------------------------------
+//							--- String Checker ---
+//------------------------------------------------------------------------------
+
+// This function will parse the string passed as arguments, and check if
+// the syntax respect the rules described in multi_args_handler.c 
+
+//------------------------------------------------------------------------------
 
 int	m_str_checker(char **stash)
 {

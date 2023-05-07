@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/04/20 13:48:12 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/05/07 14:49:25 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,26 +20,30 @@ COLOUR_GREEN =\033[0;32m
 COLOUR_END =\033[0m
 
 SRCS = srcs/main.c \
-	   srcs/parsing/args_handler.c \
-	   srcs/parsing/multi_args_handler.c \
-	   srcs/parsing/single_args_handler.c \
-	   srcs/parsing/single_args_utils/s_checker_utils.c \
-	   srcs/parsing/single_args_utils/s_str_checker.c \
-	   srcs/parsing/single_args_utils/s_charset_checker.c \
-	   srcs/parsing/single_args_utils/s_digits_checker.c \
-	   srcs/parsing/single_args_utils/s_duplicate_checker.c \
-	   srcs/parsing/single_args_utils/s_put_to_lst.c \
-	   srcs/parsing/multi_args_utils/m_str_checker.c \
-	   srcs/parsing/multi_args_utils/m_digits_checker.c \
-	   srcs/parsing/multi_args_utils/m_duplicate_checker.c \
-	   srcs/lists/ft_add_at.c \
-	   srcs/lists/ft_set_at.c \
-	   srcs/lists/ft_create_cell.c \
-	   srcs/lists/ft_get_at.c \
-	   srcs/lists/ft_free_at.c \
-	   srcs/lists/ft_free_list.c \
-	   srcs/lists/ft_lstlen.c \
-	   srcs/lists/ft_printlist.c \
+	   srcs/Parsing/args_handler.c \
+	   srcs/Parsing/multi_args_handler.c \
+	   srcs/Parsing/single_args_handler.c \
+	   srcs/Parsing/init_stacks.c \
+	   srcs/Parsing/single_args_utils/s_checker_utils.c \
+	   srcs/Parsing/single_args_utils/s_str_checker.c \
+	   srcs/Parsing/single_args_utils/s_charset_checker.c \
+	   srcs/Parsing/single_args_utils/s_digits_checker.c \
+	   srcs/Parsing/single_args_utils/s_duplicate_checker.c \
+	   srcs/Parsing/single_args_utils/s_put_to_lst.c \
+	   srcs/Parsing/multi_args_utils/m_str_checker.c \
+	   srcs/Parsing/multi_args_utils/m_digits_checker.c \
+	   srcs/Parsing/multi_args_utils/m_duplicate_checker.c \
+	   srcs/Parsing/multi_args_utils/m_put_to_lst.c \
+	   srcs/Lists/Utils/ft_add_at.c \
+	   srcs/Lists/Utils/ft_set_at.c \
+	   srcs/Lists/Utils/ft_create_cell.c \
+	   srcs/Lists/Utils/ft_get_at.c \
+	   srcs/Lists/Utils/ft_free_at.c \
+	   srcs/Lists/Utils/ft_free_list.c \
+	   srcs/Lists/Utils/ft_lstlen.c \
+	   srcs/Lists/Utils/ft_printlist.c \
+	   srcs/Lists/Actions/sa.c \
+	   Algorithms/algo_handler.c \
 
 SRCS_LIBFT = lib/libft.a \
 

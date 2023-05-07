@@ -6,11 +6,29 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 07:44:02 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/12 13:51:43 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/05/06 16:44:00 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+//------------------------------------------------------------------------------
+//						--- Int Overflow Handler ---
+//------------------------------------------------------------------------------
+
+// This function takes a string that is supposed to be converted
+// into an integer.
+
+// In order to convert the string to an integer, we need to make sure
+// no integer overflow wil occur while doing the conversion.
+
+// Step 1 : Check the len of the string and see if it's above INT_MIN's len.
+// Step 2 : Convert the string to long (A to L) and compare the integer
+// with both INT_MIN and INT_MAX
+
+// If the argument failed one of the steps, an error will be returned.
+
+//------------------------------------------------------------------------------
 
 int	ft_int_overflow_checker(char *str)
 {

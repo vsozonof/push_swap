@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 14:05:55 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/07 16:18:08 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/05/08 20:09:14 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,16 @@ void	sa(t_list *stacks)
 {
 	t_list_a	*first;
 	t_list_a	*second;
+	t_list_a	*tmp;
+	t_list_a	**head;
 
 	if (!stacks->a || ft_lstlen_a(stacks->a) == 1)
 		return ;
 	first = stacks->a;
-	second = 
-	*first->next = second->next;
+	second = first->next;
+	head = &(stacks->a);
+	tmp = second->next;
 	second->next = first;
+	first->next = tmp;
+	*head = second;
 }

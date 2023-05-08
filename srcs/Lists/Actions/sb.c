@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 14:08:01 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/07 14:08:29 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/05/08 20:14:23 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,21 @@
 // Do nothing if there is only one or no elements.
 
 //------------------------------------------------------------------------------
+
+void	sb(t_list *stacks)
+{
+	t_list_b	*first;
+	t_list_b	*second;
+	t_list_b	*tmp;
+	t_list_b	**head;
+
+	if (!stacks->b || ft_lstlen_b(stacks->b) == 1)
+		return ;
+	first = stacks->b;
+	second = first->next;
+	head = &(stacks->b);
+	tmp = second->next;
+	second->next = first;
+	first->next = tmp;
+	*head = second;
+}

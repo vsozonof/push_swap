@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 10:26:44 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/02 13:16:34 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/05/14 23:27:29 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_printlst_a(t_list_a *L)
 		printf("La liste est vide.\n");
 		return ;
 	}
+	ft_printf("LISTE A = \n");
 	while (L)
 	{
 		ft_printf("%d\n", L->data);
@@ -28,6 +29,12 @@ void	ft_printlst_a(t_list_a *L)
 
 void	ft_printlst_b(t_list_b *L)
 {
+	if (L == NULL)
+	{
+		printf("La liste est vide.\n");
+		return ;
+	}
+	ft_printf("LISTE B = \n");
 	while (L)
 	{
 		ft_printf("%d\n", L->data);

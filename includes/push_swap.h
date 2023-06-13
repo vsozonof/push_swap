@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/08 20:14:40 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/05/14 23:06:39 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,14 @@ t_list_b	*ft_add_at_b(t_list_b *L, int data, int pos);
 
 void		sa(t_list *stacks);
 void		sb(t_list *stacks);
+void		ss(t_list *stacks);
+void		pa(t_list *stacks);
+void		pb(t_list *stacks);
+void		ra(t_list *stacks);
+void		rb(t_list *stacks);
+void		rr(t_list *stacks);
+void		rra(t_list *stacks);
+void		rrb(t_list *stacks);
+void		rrr(t_list *stacks);
 
 #endif

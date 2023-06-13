@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/05/14 23:14:16 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/06/13 10:43:01 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRCS = srcs/main.c \
    	   srcs/Lists/Actions/rrb.c \
 	   srcs/Lists/Actions/rrr.c \
 	   Algorithms/algo_handler.c \
+	   Algorithms/basic_algo.c \
 
 SRCS_LIBFT = lib/libft.a \
 

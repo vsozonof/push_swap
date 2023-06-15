@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:27:44 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/13 15:30:42 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/06/15 10:14:49 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ void	rb(t_list *stacks)
 		end = end->next;
 	end->next = head;
 	head->next = NULL;
+	ft_printf("rb\n");
 }

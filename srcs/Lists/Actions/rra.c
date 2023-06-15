@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 15:40:45 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/14 23:00:43 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/06/15 10:14:14 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,5 @@ void	rra(t_list *stacks)
 	tmp->next = NULL;
 	end->next = stacks->a;
 	stacks->a = end;
+	ft_printf("rra\n");
 }

@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 18:33:33 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/13 14:51:52 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/06/15 10:14:31 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ void	pa(t_list *stacks)
 		return ;
 	stacks->a = new_a_head;
 	free(new_b_head);
+	ft_printf("pa\n");
 }

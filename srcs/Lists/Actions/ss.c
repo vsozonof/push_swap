@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 18:19:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/12 18:33:05 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/06/15 10:15:23 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	ss(t_list *stacks)
 {
 	sa(stacks);
 	sb(stacks);
+	ft_printf("ss\n");
 }

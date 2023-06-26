@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 14:05:55 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/06/15 09:10:15 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/06/19 15:21:12 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 //------------------------------------------------------------------------------
 
-void	sa(t_list *stacks)
+void	sa(t_list *stacks, int id)
 {
 	t_list_a	*first;
 	t_list_a	*second;
@@ -37,5 +37,6 @@ void	sa(t_list *stacks)
 	second->next = first;
 	first->next = tmp;
 	*head = second;
-	ft_printf("sa\n");
+	if (id == 0)
+		ft_printf("sa\n");
 }

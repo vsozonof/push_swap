@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 14:56:34 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/06/15 10:14:43 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/06/19 15:24:04 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 
 //------------------------------------------------------------------------------
 
-void	ra(t_list *stacks)
+void	ra(t_list *stacks, int id)
 {
 	t_list_a	*head;
 	t_list_a	*end;
@@ -33,5 +33,6 @@ void	ra(t_list *stacks)
 		end = end->next;
 	end->next = head;
 	head->next = NULL;
-	ft_printf("ra\n");
+	if (id == 0)
+		ft_printf("ra\n");
 }

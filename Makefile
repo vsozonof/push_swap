@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/06/13 10:43:01 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/06/19 16:28:08 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRCS = srcs/main.c \
 	   srcs/Lists/Utils/ft_free_list.c \
 	   srcs/Lists/Utils/ft_lstlen.c \
 	   srcs/Lists/Utils/ft_printlist.c \
+	   srcs/Lists/Utils/ft_is_sorted.c \
 	   srcs/Lists/Actions/sa.c \
 	   srcs/Lists/Actions/sb.c \
 	   srcs/Lists/Actions/ss.c \
@@ -55,6 +56,7 @@ SRCS = srcs/main.c \
 	   srcs/Lists/Actions/rrr.c \
 	   Algorithms/algo_handler.c \
 	   Algorithms/basic_algo.c \
+	   Algorithms/medium_algo.c \
 
 SRCS_LIBFT = lib/libft.a \
 

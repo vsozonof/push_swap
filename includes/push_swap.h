@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/06/15 10:24:48 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/06/19 16:27:32 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,13 @@ int			m_put_to_lst(char **stash, t_list *stacks);
 //------------------------------------------------------------------------------
 
 void		algo_handler(t_list *stacks);
+
 void		basic_algo(t_list *stacks);
 void		double_digit_sorter(t_list *stacks);
 void		triple_digit_handler(t_list *stacks);
 void		triple_digit_sorter(t_list *stacks, int n1, int n2, int n3);
+
+void		medium_algo(t_list *stacks);
 
 //------------------------------------------------------------------------------
 //								--- Linked List  ---
@@ -104,20 +107,21 @@ t_list_a	*ft_create_cell_a(int data);
 t_list_b	*ft_create_cell_b(int data);
 t_list_a	*ft_add_at_a(t_list_a *L, int data, int pos);
 t_list_b	*ft_add_at_b(t_list_b *L, int data, int pos);
+int			ft_is_sorted(t_list *stacks);
 
 //							--- Push Swap Actions ---
 //------------------------------------------------------------------------------
 
-void		sa(t_list *stacks);
-void		sb(t_list *stacks);
+void		sa(t_list *stacks, int id);
+void		sb(t_list *stacks, int id);
 void		ss(t_list *stacks);
 void		pa(t_list *stacks);
 void		pb(t_list *stacks);
-void		ra(t_list *stacks);
-void		rb(t_list *stacks);
+void		ra(t_list *stacks, int id);
+void		rb(t_list *stacks, int id);
 void		rr(t_list *stacks);
-void		rra(t_list *stacks);
-void		rrb(t_list *stacks);
+void		rra(t_list *stacks, int id);
+void		rrb(t_list *stacks, int id);
 void		rrr(t_list *stacks);
 
 #endif

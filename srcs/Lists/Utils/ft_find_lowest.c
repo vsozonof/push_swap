@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   medium_algo.c                                      :+:      :+:    :+:   */
+/*   ft_find_lowest.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/15 10:42:55 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/08/30 16:56:44 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/08/18 10:07:56 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/08/23 11:15:03 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	medium_algo(t_list *stacks)
+int	ft_find_lowest(t_list *stacks)
 {
-	if (ft_is_reversed(stacks))
-		return (ft_medium_reversed_sort(stacks));
+	int	n;
+	int	pos;
+	int	n_pos;
+
+	pos = 0;
+	n_pos = 0;
+	n = ft_get_at_a(stacks->a, pos);
+	while (pos <= ft_lstlen_a(stacks->a))
+	{
+		if (n > ft_get_at_a(stacks->a, pos))
+		{
+			n = ft_get_at_a(stacks->a, pos);
+			n_pos = pos;
+		}
+		else
+			pos++;
+	}
+	return (n_pos);
 }

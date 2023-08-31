@@ -6,32 +6,32 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 20:30:09 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/06/13 10:39:18 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/08/04 18:32:21 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//------------------------------------------------------------------------------
-//								--- Multi Args Format ---
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
+//!								--- Multi Args Format ---
+//!-----------------------------------------------------------------------------
 
-// This function will execute multiple function calls that will check if the
-// arguments we received are valid or not.
+//* This function will execute multiple function calls that will check if the
+//* arguments we received are valid or not.
 
-// 				⚠️ Arguments Rules ⚠️
-// ➡️ The only allowed characters passed as arguments are :
-// ➡️ Digits (0 - 9) - Minus sign (-)
-// ➡️ The string must either start with a digit or a minus sign.
-// ➡️ The string must end with a digit.
-// ➡️ No duplicates of a number will be tolerated.
-// ➡️ Every numbers must be between INT MAX and INT MIN.
+//! 				⚠️ Arguments Rules ⚠️
+//? ➡️ The only allowed characters passed as arguments are :
+//? ➡️ Digits (0 - 9) - Minus sign (-)
+//? ➡️ The string must either start with a digit or a minus sign.
+//? ➡️ The string must end with a digit.
+//? ➡️ No duplicates of a number will be tolerated.
+//? ➡️ Every numbers must be between INT MAX and INT MIN.
 
-// If the given arguments respects every rule, the digits will be
-// converted to an integer and will all be sent to our stack A.
-// If the given arguments do not respect the rules, the program will end.
+//* If the given arguments respects every rule, the digits will be
+//* converted to an integer and will all be sent to our stack A.
+//* If the given arguments do not respect the rules, the program will end.
 
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
 
 int	multi_args_handler(char **stash, t_list *stacks)
 {

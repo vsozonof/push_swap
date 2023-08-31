@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_smallest.c                                 :+:      :+:    :+:   */
+/*   medium_reversed.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/28 10:33:21 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/06/28 11:14:46 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/08/25 23:27:39 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/08/27 02:58:38 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_find_smallest(t_list *stacks)
+void	ft_medium_reversed_sort(t_list *stacks)
 {
-	int			pos;
-	int			n;
-	int			i;
-
-	i = ft_lstlen_a(stacks->a);
-	pos = 0;
-	n = 0;
-	while (n <= i)
+	if (ft_lstlen_a(stacks->a) == 4)
 	{
-		ft_get_at_a(stacks->a, n);
+		sa(stacks, 0);
+		ra(stacks, 0);
+		ra(stacks, 0);
+		sa(stacks, 0);
 	}
-	return (pos);
+	else if (ft_lstlen_a(stacks->a) == 5)
+	{
+		pb(stacks);
+		sa(stacks, 0);
+		ra(stacks, 0);
+		ra(stacks, 0);
+		pa(stacks);
+		ra(stacks, 0);
+		sa(stacks, 0);
+	}
 }

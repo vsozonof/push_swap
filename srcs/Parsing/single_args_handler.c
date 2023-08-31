@@ -6,32 +6,32 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 20:30:06 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/04 20:22:30 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/08/04 18:33:25 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//------------------------------------------------------------------------------
-//								--- Single Args Format ---
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
+//!								--- Single Args Format ---
+//!-----------------------------------------------------------------------------
 
-// This function will execute multiple function calls that will check if the
-// arguments we received are valid or not.
+//* This function will execute multiple function calls that will check if the
+//* arguments we received are valid or not.
 
-// 				⚠️ Arguments Rules ⚠️
-// ➡️ The only allowed characters passed as arguments are :
-// ➡️ Digits (0 - 9) - Whitespaces ( ) - Minus sign (-)
-// ➡️ The string must either start with a digit or a minus sign.
-// ➡️ Every digits must be separed with a single whitespace.
-// ➡️ No duplicates of a number will be tolerated.
-// ➡️ Every numbers must be between INT MAX and INT MIN.
+//! 				⚠️ Arguments Rules ⚠️
+//? ➡️ The only allowed characters passed as arguments are :
+//? ➡️ Digits (0 - 9) - Whitespaces ( ) - Minus sign (-)
+//? ➡️ The string must either start with a digit or a minus sign.
+//? ➡️ Every digits must be separed with a single whitespace.
+//? ➡️ No duplicates of a number will be tolerated.
+//? ➡️ Every numbers must be between INT MAX and INT MIN.
 
-// If the given arguments respects every rule, the digits will be
-// converted to an integer and will all be sent to our stack A.
-// If the given arguments do not respect the rules, the program will end.
+//* If the given arguments respects every rule, the digits will be
+//* converted to an integer and will all be sent to our stack A.
+//* If the given arguments do not respect the rules, the program will end.
 
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
 
 int	single_args_handler(char *str, t_list *stacks)
 {

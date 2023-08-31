@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/06/28 10:45:58 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/08/27 02:58:48 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void		triple_digit_handler(t_list *stacks);
 void		triple_digit_sorter(t_list *stacks, int n1, int n2, int n3);
 
 void		medium_algo(t_list *stacks);
+void		ft_medium_reversed_sort(t_list *stacks);
 
 //------------------------------------------------------------------------------
 //								--- Linked List  ---
@@ -108,7 +109,9 @@ t_list_b	*ft_create_cell_b(int data);
 t_list_a	*ft_add_at_a(t_list_a *L, int data, int pos);
 t_list_b	*ft_add_at_b(t_list_b *L, int data, int pos);
 int			ft_is_sorted(t_list *stacks);
-int			ft_find_smallest(t_list *stacks);
+int			ft_is_reversed(t_list *stacks);
+int			ft_find_lowest(t_list *stacks);
+int			ft_find_biggest(t_list *stacks);
 
 //							--- Push Swap Actions ---
 //------------------------------------------------------------------------------

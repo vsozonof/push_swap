@@ -6,20 +6,20 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 05:10:12 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/06 16:54:56 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/08/04 18:29:21 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//------------------------------------------------------------------------------
-//							--- String Checker ---
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
+//!							--- String Checker ---
+//!-----------------------------------------------------------------------------
 
-// This function will parse the string passed as arguments, and check if
-// the syntax respect the rules described in single_args_handler.c 
+//* This function will parse the string passed as arguments, and check if
+//* the syntax respect the rules described in single_args_handler.c 
 
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
 
 int	s_str_checker(char *str)
 {

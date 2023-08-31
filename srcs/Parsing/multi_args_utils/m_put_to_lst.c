@@ -6,20 +6,20 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 20:23:57 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/07 13:55:23 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/08/04 18:18:49 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//------------------------------------------------------------------------------
-//						-⛓️- Creating Stack A -⛓️-
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
+//!						-⛓️- Creating Stack A -⛓️-
+//!-----------------------------------------------------------------------------
 
-// This function will convert all the arguments to an integer and place them
-// in our stack A, represented by a linked list.
+//* This function will convert all the arguments to an integer and place them
+//* in the stack A, represented by a linked list.
 
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
 
 int	m_put_to_lst(char **stash, t_list *stacks)
 {

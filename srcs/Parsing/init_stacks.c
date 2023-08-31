@@ -6,20 +6,20 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 13:35:11 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/05/07 13:45:43 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/08/04 18:31:13 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-//------------------------------------------------------------------------------
-//							--- Stacks Initialization ---
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
+//!							--- Stacks Initialization ---
+//!-----------------------------------------------------------------------------
 
-// This function will simply initialize our stacks A and B so we can use
-// them once the arguments verification is done.
+//* This function will simply initialize our stacks A and B so we can use
+//* them once the arguments verification is done.
 
-//------------------------------------------------------------------------------
+//!-----------------------------------------------------------------------------
 
 void	init_stacks(t_list *stacks)
 {

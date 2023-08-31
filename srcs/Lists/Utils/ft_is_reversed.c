@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   medium_algo.c                                      :+:      :+:    :+:   */
+/*   ft_is_reversed.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/15 10:42:55 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/08/30 16:56:44 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/08/25 13:10:30 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/08/25 13:11:40 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	medium_algo(t_list *stacks)
+int	ft_is_reversed(t_list *stacks)
 {
-	if (ft_is_reversed(stacks))
-		return (ft_medium_reversed_sort(stacks));
+	t_list_a	*tmp;
+
+	tmp = stacks->a;
+	while (tmp && tmp->next)
+	{
+		if (tmp->data < tmp->next->data)
+			return (0);
+		tmp = tmp->next;
+	}
+	return (1);
 }

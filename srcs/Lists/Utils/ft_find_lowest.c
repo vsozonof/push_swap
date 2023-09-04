@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 10:07:56 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/08/23 11:15:03 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/04 14:12:46 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_find_lowest(t_list *stacks)
 	pos = 0;
 	n_pos = 0;
 	n = ft_get_at_a(stacks->a, pos);
-	while (pos <= ft_lstlen_a(stacks->a))
+	while (pos < ft_lstlen_a(stacks->a))
 	{
 		if (n > ft_get_at_a(stacks->a, pos))
 		{

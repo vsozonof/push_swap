@@ -6,18 +6,22 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 08:33:05 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/04 13:31:13 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/05 15:14:15 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	actions_calculator(int index)
+// Penser a +1 le lowest et sec_lowest pour ajuster par rapport a l'index reel
+
+int	actions_calculator(int lowest, int sec_lowest)
 {
 	int	n_act;
 
 	n_act = 0;
-	n_act += five_digits_actions(index);
+	n_act += five_digits_actions(lowest);
+	n_act += four_digits_calculator(sec_lowest, lowest);
+	ft_printf("1st low %i | 2nd low %i |\n", five_digits_actions(lowest), four_digits_a(sec_lowest, lowest));
 	return (n_act);
 }
 

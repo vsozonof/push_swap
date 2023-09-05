@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 14:27:38 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/05 19:56:55 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ int			five_digits_actions(int index);
 int			four_digits_calculator(int index, int old_index);
 int			four_digits_a(int index, int old_index);
 int			four_digits_b(int index, int old_index);
+int			ft_find_sorted_sequence(t_list *stacks);
+int			ft_digits_sequence_detector(t_list *stacks, int seqlen);
 
 void		basic_algo(t_list *stacks);
 void		double_digit_sorter(t_list *stacks);

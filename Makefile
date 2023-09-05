@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/09/04 14:00:55 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/09/05 18:20:48 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRCS = srcs/main.c \
 	   srcs/Lists/Utils/ft_find_biggest.c \
 	   srcs/Lists/Utils/ft_find_lowest.c \
 	   srcs/Lists/Utils/ft_find_sec_lowest.c \
+	   srcs/Lists/Utils/ft_find_sorted_sequence.c \
 	   srcs/Lists/Actions/sa.c \
 	   srcs/Lists/Actions/sb.c \
 	   srcs/Lists/Actions/ss.c \

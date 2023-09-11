@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:15 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/01 11:51:43 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/11 02:19:22 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main(int argc, char *argv[])
 		return (pr_error("Not enough arguments."));
 	algo_handler(&stacks);
 	ft_printlst_a(stacks.a);
+	ft_printlst_tmp(stacks.tmp);
+	ft_freelist_tmp(stacks.tmp);
 	ft_freelist_a(stacks.a);
 	ft_freelist_b(stacks.b);
 }

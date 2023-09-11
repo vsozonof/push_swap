@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_lowest.c                                   :+:      :+:    :+:   */
+/*   medium_sec_smlst_to_b.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/18 10:07:56 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 20:19:54 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/09/05 21:08:26 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/09/11 00:26:08 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_find_lowest(t_list *stacks)
+void	medium_second_digit_mover(t_list *stacks, int mode)
 {
-	int	n;
 	int	pos;
-	int	n_pos;
 
-	pos = 0;
-	n_pos = 0;
-	n = ft_get_at_a(stacks->a, pos);
-	while (pos < ft_lstlen_a(stacks->a))
+	if (mode == 1)
+		pos = ft_find_second_lowest(stacks) + 1;
+	else
+		pos = ft_find_lowest(stacks) + 1;
+	if (pos == 1)
+		pb(stacks);
+	else if (pos == 2)
 	{
-		if (n > ft_get_at_a(stacks->a, pos))
-		{
-			n = ft_get_at_a(stacks->a, pos);
-			n_pos = pos;
-		}
-		else
-			pos++;
+		sa(stacks, 0);
+		pb(stacks);
 	}
-	return (n_pos);
+	else if (pos == 3)
+	{
+		ra(stacks, 0);
+		ra(stacks, 0);
+		pb(stacks);
+	}
+	else
+	{
+		rra(stacks, 0);
+		pb(stacks);
+	}
 }

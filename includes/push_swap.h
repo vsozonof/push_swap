@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 19:56:55 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/11 03:35:14 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,28 @@
 
 typedef struct s_list_a
 {
-	int				data;
-	struct s_list_a	*next;
+	int					data;
+	struct s_list_a		*next;
 }	t_list_a;
 
 typedef struct s_list_b
 {
-	int				data;
-	struct s_list_b	*next;
+	int					data;
+	struct s_list_b		*next;
 }	t_list_b;
+
+typedef struct s_list_tmp
+{
+	int					data;
+	int					index;
+	struct s_list_tmp	*next;
+}	t_list_tmp;
 
 typedef struct s_lists
 {
-	struct s_list_a	*a;
-	struct s_list_b	*b;
+	struct s_list_a		*a;
+	struct s_list_b		*b;
+	struct s_list_tmp	*tmp;
 }	t_list;
 
 //------------------------------------------------------------------------------
@@ -74,21 +82,30 @@ int			m_put_to_lst(char **stash, t_list *stacks);
 //------------------------------------------------------------------------------
 
 void		algo_handler(t_list *stacks);
-int			actions_calculator(int lowest, int sec_lowest);
+int			actions_calculator(t_list *stacks);
 int			five_digits_actions(int index);
 int			four_digits_calculator(int index, int old_index);
 int			four_digits_a(int index, int old_index);
 int			four_digits_b(int index, int old_index);
 int			ft_find_sorted_sequence(t_list *stacks);
 int			ft_digits_sequence_detector(t_list *stacks, int seqlen);
+int			first_move_handler(t_list *stacks);
 
 void		basic_algo(t_list *stacks);
 void		double_digit_sorter(t_list *stacks);
-void		triple_digit_handler(t_list *stacks);
+void		triple_digit_handler(t_list *stacks, int mode);
 void		triple_digit_sorter(t_list *stacks, int n1, int n2, int n3);
+void		triple_digit_sorter_spe(t_list *stacks, int n1, int n2, int n3);
 
 void		medium_algo(t_list *stacks);
 void		ft_medium_reversed_sort(t_list *stacks);
+void		medium_first_digit_mover(t_list *stacks, int mode);
+void		first_move_to_b_one(t_list *stacks, int pos);
+void		first_move_to_b_two(t_list *stacks, int pos);
+void		medium_second_digit_mover(t_list *stacks, int mode);
+void		medium_move_back_to_b(t_list *stacks);
+void		medium_sequenced_sorter(t_list *stacks);
+void		medium_four_digits_sequence(t_list *stacks);
 
 //------------------------------------------------------------------------------
 //								--- Linked List  ---
@@ -101,25 +118,31 @@ void		init_stacks(t_list *stacks);
 int			s_put_to_lst(char **stash, t_list *stacks);
 void		ft_set_at_a(t_list_a *L, int data, int pos);
 void		ft_set_at_b(t_list_b *L, int data, int pos);
+void		ft_set_at_tmp(t_list_tmp *L, int data, int pos);
 void		ft_printlst_a(t_list_a *L);
 void		ft_printlst_b(t_list_b *L);
+void		ft_printlst_tmp(t_list_tmp *L);
 long		ft_lstlen_a(t_list_a *L);
 long		ft_lstlen_b(t_list_b *L);
 int			ft_get_at_a(t_list_a *L, int pos);
 int			ft_get_at_b(t_list_b *L, int pos);
 t_list_a	*ft_freelist_a(t_list_a *L);
 t_list_b	*ft_freelist_b(t_list_b *L);
+t_list_tmp	*ft_freelist_tmp(t_list_tmp *L);
 t_list_a	*ft_free_at_a(t_list_a *L, int pos);
 t_list_b	*ft_free_at_b(t_list_b *L, int pos);
 t_list_a	*ft_create_cell_a(int data);
 t_list_b	*ft_create_cell_b(int data);
+t_list_tmp	*ft_create_cell_tmp(int data);
 t_list_a	*ft_add_at_a(t_list_a *L, int data, int pos);
 t_list_b	*ft_add_at_b(t_list_b *L, int data, int pos);
+t_list_tmp	*ft_add_at_tmp(t_list_tmp *L, int data, int pos);
 int			ft_is_sorted(t_list *stacks);
 int			ft_is_reversed(t_list *stacks);
 int			ft_find_lowest(t_list *stacks);
 int			ft_find_second_lowest(t_list *stacks);
 int			ft_find_biggest(t_list *stacks);
+void		ft_tmp_indexer(t_list *stacks);
 
 //							--- Push Swap Actions ---
 //------------------------------------------------------------------------------

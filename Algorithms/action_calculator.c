@@ -6,23 +6,29 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 08:33:05 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 15:14:15 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/11 00:33:56 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Penser a +1 le lowest et sec_lowest pour ajuster par rapport a l'index reel
-
-int	actions_calculator(int lowest, int sec_lowest)
+int	actions_calculator(t_list *stacks)
 {
-	int	n_act;
+	int	n_act_a;
+	int	n_act_b;
+	int	lowest;
+	int	sec_lowest;
 
-	n_act = 0;
-	n_act += five_digits_actions(lowest);
-	n_act += four_digits_calculator(sec_lowest, lowest);
-	ft_printf("1st low %i | 2nd low %i |\n", five_digits_actions(lowest), four_digits_a(sec_lowest, lowest));
-	return (n_act);
+	lowest = (ft_find_lowest(stacks) + 1);
+	sec_lowest = (ft_find_second_lowest(stacks) + 1);
+	n_act_a = (five_digits_actions(lowest)
+			+ four_digits_calculator(sec_lowest, lowest));
+	n_act_b = (five_digits_actions(sec_lowest)
+			+ four_digits_calculator(lowest, sec_lowest));
+	if (n_act_a > n_act_b)
+		return (n_act_b);
+	else
+		return (n_act_a);
 }
 
 int	five_digits_actions(int index)

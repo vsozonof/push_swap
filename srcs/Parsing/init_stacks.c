@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 13:35:11 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/08/04 18:31:13 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/11 02:06:49 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void	init_stacks(t_list *stacks)
 {
 	stacks->a = NULL;
 	stacks->b = NULL;
+	stacks->tmp = NULL;
 }

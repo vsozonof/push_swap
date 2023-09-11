@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 10:25:21 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/26 15:36:03 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/11 02:16:35 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,18 @@ t_list_b	*ft_create_cell_b(int data)
 	t_list_b	*cell;
 
 	cell = malloc(sizeof(t_list_b));
+	if (!cell)
+		return (NULL);
+	cell->data = data;
+	cell->next = NULL;
+	return (cell);
+}
+
+t_list_tmp	*ft_create_cell_tmp(int data)
+{
+	t_list_tmp	*cell;
+
+	cell = malloc(sizeof(t_list_tmp));
 	if (!cell)
 		return (NULL);
 	cell->data = data;

@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_lowest.c                                   :+:      :+:    :+:   */
+/*   medium_sequenced.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/18 10:07:56 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 20:19:54 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/09/05 23:47:18 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/09/08 06:52:58 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_find_lowest(t_list *stacks)
+void	medium_sequenced_sorter(t_list *stacks)
 {
-	int	n;
-	int	pos;
-	int	n_pos;
+	if (ft_find_sorted_sequence(stacks) == 4)
+		medium_four_digits_sequence(stacks);
+	
+}
 
-	pos = 0;
-	n_pos = 0;
-	n = ft_get_at_a(stacks->a, pos);
-	while (pos < ft_lstlen_a(stacks->a))
-	{
-		if (n > ft_get_at_a(stacks->a, pos))
-		{
-			n = ft_get_at_a(stacks->a, pos);
-			n_pos = pos;
-		}
-		else
-			pos++;
-	}
-	return (n_pos);
+void	medium_four_digits_sequence(t_list *stacks)
+{
+	if (ft_find_biggest(stacks) + 1 == 1)
+		ra(stacks, 0);
+	// else if ()
 }

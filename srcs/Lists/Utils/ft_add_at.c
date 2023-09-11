@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 10:26:18 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/04/28 18:58:02 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/11 02:16:15 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,35 @@ t_list_b	*ft_add_at_b(t_list_b *L, int data, int pos)
 	prec = L;
 	i = 0;
 	cell = ft_create_cell_b(data);
+	if (L == NULL)
+		return (cell);
+	if (pos == 0)
+	{
+		cell->next = L;
+		return (cell);
+	}
+	while (i < pos)
+	{
+		i++;
+		prec = cur;
+		cur = cur->next;
+	}
+	prec->next = cell;
+	cell->next = cur;
+	return (L);
+}
+
+t_list_tmp	*ft_add_at_tmp(t_list_tmp *L, int data, int pos)
+{
+	t_list_tmp	*prec;
+	t_list_tmp	*cur;
+	t_list_tmp	*cell;
+	int			i;
+
+	cur = L;
+	prec = L;
+	i = 0;
+	cell = ft_create_cell_tmp(data);
 	if (L == NULL)
 		return (cell);
 	if (pos == 0)

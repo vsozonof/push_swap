@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_lowest.c                                   :+:      :+:    :+:   */
+/*   ft_tmp_indexer.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/18 10:07:56 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 20:19:54 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/09/11 02:53:52 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/09/11 04:02:00 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_find_lowest(t_list *stacks)
+void	ft_tmp_indexer(t_list *stacks)
 {
-	int	n;
-	int	pos;
-	int	n_pos;
+	int	n_tmp;
 
-	pos = 0;
-	n_pos = 0;
-	n = ft_get_at_a(stacks->a, pos);
-	while (pos < ft_lstlen_a(stacks->a))
+	while (stacks->tmp)
 	{
-		if (n > ft_get_at_a(stacks->a, pos))
-		{
-			n = ft_get_at_a(stacks->a, pos);
-			n_pos = pos;
-		}
-		else
-			pos++;
+		
 	}
-	return (n_pos);
 }

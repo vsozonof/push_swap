@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 13:33:24 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 15:16:14 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/05 20:20:02 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,5 @@ int	ft_find_second_lowest(t_list *stacks)
 		else
 			pos++;
 	}
-	ft_printf("value sec lowest : %i\n", s_lwst_pos);
 	return (s_lwst_pos);
 }

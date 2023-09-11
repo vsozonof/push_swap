@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_lowest.c                                   :+:      :+:    :+:   */
+/*   medium_bool.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/18 10:07:56 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 20:19:54 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/09/08 08:31:53 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/09/11 00:26:02 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_find_lowest(t_list *stacks)
+int	first_move_handler(t_list *stacks)
 {
-	int	n;
-	int	pos;
-	int	n_pos;
+	int	n_act_a;
+	int	n_act_b;
+	int	lowest;
+	int	sec_lowest;
 
-	pos = 0;
-	n_pos = 0;
-	n = ft_get_at_a(stacks->a, pos);
-	while (pos < ft_lstlen_a(stacks->a))
-	{
-		if (n > ft_get_at_a(stacks->a, pos))
-		{
-			n = ft_get_at_a(stacks->a, pos);
-			n_pos = pos;
-		}
-		else
-			pos++;
-	}
-	return (n_pos);
+	lowest = (ft_find_lowest(stacks) + 1);
+	sec_lowest = (ft_find_second_lowest(stacks) + 1);
+	n_act_a = (five_digits_actions(lowest)
+			+ four_digits_calculator(sec_lowest, lowest));
+	n_act_b = (five_digits_actions(sec_lowest)
+			+ four_digits_a(lowest, sec_lowest));
+	if (n_act_a > n_act_b)
+		return (2);
+	else
+		return (1);
 }

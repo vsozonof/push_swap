@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 14:37:04 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/05 18:39:24 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/18 19:13:02 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	algo_handler(t_list *stacks)
 
 	stack_b = stacks->b;
 	nbrs = ft_lstlen_a(stacks->a);
+	ft_tmp_indexer(stacks);
 	(void)stack_b;
 	if (ft_is_sorted(stacks))
 		return ;

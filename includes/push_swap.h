@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/18 20:16:14 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/19 15:10:08 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ int			ft_is_reversed(t_list *stacks);
 int			ft_find_lowest(t_list *stacks);
 int			ft_find_second_lowest(t_list *stacks);
 int			ft_find_biggest(t_list *stacks);
-void		ft_tmp_indexer(t_list *stacks);
+void		ft_tmp_formater(t_list *stacks);
 void		ft_put_to_tab(int *tab, t_list_a *stack, int index);
 void		ft_sort_int_tab(int *tab, int size);
 

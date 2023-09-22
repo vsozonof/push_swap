@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 02:53:52 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/19 16:12:12 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/22 18:29:45 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,16 @@ void	ft_tmp_formater(t_list *stacks)
 	tab = malloc(sizeof(int) * ft_lstlen_a(stacks->a));
 	ft_put_to_tab(tab, stacks->a, i);
 	ft_sort_int_tab(tab, ft_lstlen_a(stacks->a) - 1);
-	while (ptr->next)
+	while (ptr)
 	{
-		while (i <= ft_lstlen_a(stacks->a) - 1)
+		if (tab[i] == ptr->data)
 		{
-			if (ptr->data == tab[i])
-			{
-				ptr->index = i;
-				ptr = ptr->next;
-				i = 0;
-			}
-			i++;
+			ptr->index = i + 1;
+			ptr = ptr->next;
+			i = 0;
 		}
+		else
+			i++;
 	}
 	free(tab);
 }

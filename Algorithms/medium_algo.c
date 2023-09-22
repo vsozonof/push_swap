@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 10:42:55 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/11 00:53:11 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/22 13:41:49 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	medium_algo(t_list *stacks)
 	else if (ft_find_sorted_sequence(stacks)
 		&& (actions_calculator(stacks) <= 4))
 	{
-		ft_printf("seqlen = %i\n",ft_find_sorted_sequence(stacks));
+		// ft_printf("seqlen = %i\n",ft_find_sorted_sequence(stacks));
 		// medium_sequenced_sorter(stacks);
 
 	}

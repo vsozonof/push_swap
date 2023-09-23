@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 08:31:53 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/11 00:26:02 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/23 22:58:00 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	first_move_handler(t_list *stacks)
 	n_act_a = (five_digits_actions(lowest)
 			+ four_digits_calculator(sec_lowest, lowest));
 	n_act_b = (five_digits_actions(sec_lowest)
-			+ four_digits_a(lowest, sec_lowest));
+			+ four_digits_calculator(lowest, sec_lowest));
 	if (n_act_a > n_act_b)
 		return (2);
 	else

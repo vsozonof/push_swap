@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:57:52 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/22 13:49:56 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/23 12:27:07 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,14 @@ int	ft_digits_sequence_detector(t_list *stacks, int seqlen)
 	tmp = stacks->tmp;
 	while (tmp && tmp->next)
 	{
-		ft_printf("index = %i - next index = %i\n", tmp->index, tmp->next->index);
-		if (tmp->index > tmp->next->index)
-			i = 0;
-		else if (tmp->next->index == (tmp->index + 1))
-		{	
-			ft_printf("boop\n");
+		if (tmp->next->index == (tmp->index + 1))
+		{
 			i++;
 			if (i == seqlen)
 				return (1);
 		}
+		else
+			i = 0;
 		tmp = tmp->next;
 	}
 	return (0);

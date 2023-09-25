@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/09/11 02:54:26 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/09/25 04:37:22 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,15 +61,19 @@ SRCS = srcs/main.c \
    	   srcs/Lists/Actions/rrb.c \
 	   srcs/Lists/Actions/rrr.c \
 	   Algorithms/algo_handler.c \
-	   Algorithms/basic_algo.c \
-	   Algorithms/medium_algo.c \
-	   Algorithms/medium_reversed.c \
-	   Algorithms/medium_smallest_to_b.c\
-	   Algorithms/medium_sec_smlst_to_b.c \
-	   Algorithms/medium_move_back_to_b.c \
-	   Algorithms/medium_sequenced.c \
-	   Algorithms/action_calculator.c \
-	   Algorithms/medium_bool.c \
+	   Algorithms/Basic/basic_algo.c \
+	   Algorithms/Medium/medium_algo.c \
+	   Algorithms/Medium/medium_reversed.c \
+	   Algorithms/Medium/medium_smallest_to_b.c\
+	   Algorithms/Medium/medium_sec_smlst_to_b.c \
+	   Algorithms/Medium/medium_move_back_to_b.c \
+	   Algorithms/Medium/medium_sequenced.c \
+	   Algorithms/Medium/medium_actions_calculator.c \
+	   Algorithms/Medium/medium_bool.c \
+	   Algorithms/Medium/medium_lwst_seq_sorter.c \
+	   Algorithms/Medium/medium_sec_lwst_seq_sorter.c \
+	   Algorithms/Medium/medium_thrd_lwst_seq_sorter.c \
+
 
 SRCS_LIBFT = lib/libft.a \
 

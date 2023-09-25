@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/19 15:10:08 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/25 04:33:59 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int			four_digits_calculator(int index, int old_index);
 int			four_digits_a(int index, int old_index);
 int			four_digits_b(int index, int old_index);
 int			ft_find_sorted_sequence(t_list *stacks);
-int			ft_digits_sequence_detector(t_list *stacks, int seqlen);
+int			ft_digits_sequence_detector(t_list *stacks, int seqlen, int mode);
 int			first_move_handler(t_list *stacks);
 
 void		basic_algo(t_list *stacks);
@@ -98,6 +98,7 @@ void		triple_digit_sorter(t_list *stacks, int n1, int n2, int n3);
 void		triple_digit_sorter_spe(t_list *stacks, int n1, int n2, int n3);
 
 void		medium_algo(t_list *stacks);
+
 void		ft_medium_reversed_sort(t_list *stacks);
 void		medium_first_digit_mover(t_list *stacks, int mode);
 void		first_move_to_b_one(t_list *stacks, int pos);
@@ -105,7 +106,23 @@ void		first_move_to_b_two(t_list *stacks, int pos);
 void		medium_second_digit_mover(t_list *stacks, int mode);
 void		medium_move_back_to_b(t_list *stacks);
 void		medium_sequenced_sorter(t_list *stacks);
+void		medium_three_digits_sequence(t_list *stacks);
 void		medium_four_digits_sequence(t_list *stacks);
+
+void		ft_lowest_sequence_handler(t_list *stacks);
+void		ft_lowest_seq_sorter_a(t_list *stacks);
+void		ft_lowest_seq_sorter_b(t_list *stacks);
+void		ft_lowest_seq_sorter_c(t_list *stacks);
+
+void		ft_sec_lowest_sequence_handler(t_list *stacks);
+void		ft_sec_lowest_seq_sorter_a(t_list *stacks);
+void		ft_sec_lowest_seq_sorter_b(t_list *stacks);
+void		ft_sec_lowest_seq_sorter_c(t_list *stacks);
+
+void		ft_thrd_lowest_sequence_handler(t_list *stacks);
+void		ft_thrd_lowest_seq_sorter_a(t_list *stacks);
+void		ft_thrd_lowest_seq_sorter_b(t_list *stacks);
+void		ft_thrd_lowest_seq_sorter_c(t_list *stacks);
 
 //------------------------------------------------------------------------------
 //								--- Linked List  ---
@@ -145,7 +162,6 @@ int			ft_find_biggest(t_list *stacks);
 void		ft_tmp_formater(t_list *stacks);
 void		ft_put_to_tab(int *tab, t_list_a *stack, int index);
 void		ft_sort_int_tab(int *tab, int size);
-
 
 //							--- Push Swap Actions ---
 //------------------------------------------------------------------------------

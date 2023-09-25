@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 14:37:04 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/23 14:50:49 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/25 04:46:45 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	algo_handler(t_list *stacks)
 	nbrs = ft_lstlen_a(stacks->a);
 	ft_tmp_formater(stacks);
 	(void)stack_b;
-	ft_printf("actions n == %i\n", actions_calculator(stacks));
 	if (ft_is_sorted(stacks))
 		return ;
 	if (nbrs <= 3)
 		basic_algo(stacks);
-	if (nbrs > 3 && nbrs <= 5)
+	else if (nbrs > 3 && nbrs <= 5)
 		medium_algo(stacks);
+	// else if (nbrs > 5 && nbrs <= 10)
 }

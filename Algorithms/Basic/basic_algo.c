@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 10:17:16 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/10 23:48:11 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/25 05:07:43 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,7 @@ void	triple_digit_sorter_spe(t_list *stacks, int n1, int n2, int n3)
 		ss(stacks);
 		ra(stacks, 0);
 	}
+	else
+		sb(stacks, 0);
 	return ;
 }

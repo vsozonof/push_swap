@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/27 14:38:53 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/27 14:57:59 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,9 +130,11 @@ void		ft_thrd_lowest_seq_sorter_c(t_list *stacks);
 
 void		hard_algo(t_list *stacks);
 void		chunk_move_to_b_100(t_list *stacks);
+void		chunk_move_to_a_100(t_list *stacks);
 void		chunk_mover_100(t_list *stacks, int i_max, int n);
 void		chunk_sorter_100(t_list *stacks);
 int			chunk_digit_mover_to_b_100(t_list *stacks, int i_max);
+int			chunk_digit_mover_to_a_100(t_list *stacks, int i_max);
 void		top_or_bot_moving_100(t_list *stacks, int mode, int n);
 int			move_optimizer_100(t_list *stacks, int mode, int n);
 int			top_to_bot_scanner(t_list *stacks, int i_max);

@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 10:26:44 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/25 04:30:20 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/27 08:33:04 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_printlst_a(t_list_a *L)
 	ft_printf("LISTE A = \n");
 	while (L)
 	{
-		ft_printf("%d\n", L->data);
+		ft_printf("[%d][%d] -> %d\n", L->pos, L->index, L->data);
 		L = L->next;
 	}
 }
@@ -37,7 +37,7 @@ void	ft_printlst_b(t_list_b *L)
 	ft_printf("LISTE B = \n");
 	while (L)
 	{
-		ft_printf("%d\n", L->data);
+		ft_printf("[%d]%d\n", L->index, L->data);
 		L = L->next;
 	}
 	ft_printf("\n");

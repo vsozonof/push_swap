@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo_handler.c                                     :+:      :+:    :+:   */
+/*   ft_pos_setter.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/07 14:37:04 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/26 07:56:18 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/09/26 07:51:55 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/09/26 09:20:42 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	algo_handler(t_list *stacks)
+void	pos_setter(t_list *stacks)
 {
-	t_list_b	*stack_b;
-	int			nbrs;
+	t_list_a	*ptr;
+	int			pos;
 
-	stack_b = stacks->b;
-	nbrs = ft_lstlen_a(stacks->a);
-	ft_tmp_formater(stacks);
-	pos_setter(stacks);
-	(void)stack_b;
-	if (ft_is_sorted(stacks))
-		return ;
-	if (nbrs <= 3)
-		basic_algo(stacks);
-	else if (nbrs > 3 && nbrs <= 5)
-		medium_algo(stacks);
-	else if (nbrs > 5 && nbrs <= 100)
-		hard_algo(stacks);
+	pos = 1;
+	ptr = stacks->a;
+	while (ptr)
+	{
+		ptr->pos = pos;
+		pos++;
+		ptr = ptr->next;
+	}
 }

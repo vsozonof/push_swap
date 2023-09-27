@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 18:33:33 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/06/15 10:14:31 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/09/26 06:56:14 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	pa(t_list *stacks)
 	new_a_head = ft_add_at_a(stacks->a, new_b_head->data, 0);
 	if (!new_a_head)
 		return ;
+	new_a_head->index = new_b_head->index;
 	stacks->a = new_a_head;
 	free(new_b_head);
 	ft_printf("pa\n");

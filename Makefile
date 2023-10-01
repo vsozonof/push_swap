@@ -6,7 +6,7 @@
 #    By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 08:53:01 by vsozonof          #+#    #+#              #
-#    Updated: 2023/09/27 12:29:23 by vsozonof         ###   ########.fr        #
+#    Updated: 2023/09/29 19:37:01 by vsozonof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,10 @@ SRCS = srcs/main.c \
 	   Algorithms/Medium/medium_sec_lwst_seq_sorter.c \
 	   Algorithms/Medium/medium_thrd_lwst_seq_sorter.c \
 	   Algorithms/Hard/hard_algo.c \
+	   Algorithms/Hard/chunk_mover_to_a_100.c \
+	   Algorithms/Hard/chunk_mover_to_b_100.c \
+	   Algorithms/Hard/chunk_sorter_100.c \
+	   Algorithms/Hard/stack_scanner_100.c \
 
 
 SRCS_LIBFT = lib/libft.a \

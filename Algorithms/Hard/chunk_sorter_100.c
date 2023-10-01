@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hard_algo.c                                        :+:      :+:    :+:   */
+/*   chunk_sorter_100.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 06:35:01 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/29 22:32:12 by vsozonof         ###   ########.fr       */
+/*   Created: 2023/09/29 19:30:24 by vsozonof          #+#    #+#             */
+/*   Updated: 2023/09/29 19:32:13 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	hard_algo(t_list *stacks)
+void	chunk_sorter_100(t_list *stacks)
 {
-	chunk_move_to_b_100(stacks);
-	medium_algo(stacks);
-	chunk_move_to_a_100(stacks);
+	(void)stacks;
 }

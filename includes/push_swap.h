@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/27 14:57:59 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/01 17:02:06 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,14 +131,23 @@ void		ft_thrd_lowest_seq_sorter_c(t_list *stacks);
 void		hard_algo(t_list *stacks);
 void		chunk_move_to_b_100(t_list *stacks);
 void		chunk_move_to_a_100(t_list *stacks);
-void		chunk_mover_100(t_list *stacks, int i_max, int n);
+void		chunk_mover_a_100(t_list *stacks, int i_max, int n);
+void		chunk_mover_b_100(t_list *stacks, int i_max, int n);
 void		chunk_sorter_100(t_list *stacks);
-int			chunk_digit_mover_to_b_100(t_list *stacks, int i_max);
-int			chunk_digit_mover_to_a_100(t_list *stacks, int i_max);
-void		top_or_bot_moving_100(t_list *stacks, int mode, int n);
+void		chunk_digit_mover_to_b_100(t_list *stacks, int i_max);
+void		chunk_digit_mover_to_a_100(t_list *stacks, int i_max);
+void		top_or_bot_moving_100(t_list *stacks, int mode, int n, int i_max);
 int			move_optimizer_100(t_list *stacks, int mode, int n);
-int			top_to_bot_scanner(t_list *stacks, int i_max);
-int			bot_to_top_scanner(t_list *stacks, int i_max);
+int			top_to_bot_scanner_a(t_list *stacks, int i_max);
+int			bot_to_top_scanner_a(t_list *stacks, int i_max);
+int			top_to_bot_scanner_b(t_list *stacks, int i_max);
+int			bot_to_top_scanner_b(t_list *stacks, int i_max);
+int			do_ra_or_rr(t_list *stacks, int mode);
+
+void		chunk_digit_mvr(t_list *stacks, int i_max);
+int			*move_cheapest(t_list *stacks, int i_max);
+void		first_digit_calculator(t_list *stacks, int *tab, int i_max);
+void		sec_digit_calculator(t_list *stacks, int *tab, int i_max);
 
 //------------------------------------------------------------------------------
 //								--- Linked List  ---
@@ -179,7 +188,8 @@ void		ft_tmp_formater(t_list *stacks);
 void		ft_put_to_tab(int *tab, t_list_a *stack, int index);
 void		ft_sort_int_tab(int *tab, int size);
 void		pos_setter(t_list *stacks);
-void		ft_add_prev_ptr(t_list *stacks);
+void		ft_add_prev_ptr_a(t_list *stacks);
+void		ft_add_prev_ptr_b(t_list *stacks);
 
 //							--- Push Swap Actions ---
 //------------------------------------------------------------------------------

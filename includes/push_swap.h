@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/10/01 17:02:06 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/02 17:30:16 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,10 +144,15 @@ int			top_to_bot_scanner_b(t_list *stacks, int i_max);
 int			bot_to_top_scanner_b(t_list *stacks, int i_max);
 int			do_ra_or_rr(t_list *stacks, int mode);
 
-void		chunk_digit_mvr(t_list *stacks, int i_max);
-int			*move_cheapest(t_list *stacks, int i_max);
+void		chunk_digit_mvr(t_list *stacks, int i_max, int n);
+void		pair_digit_system_handler(t_list *stacks, int i_max);
+int			cheapest_move_selector(int *tab);
+void		pair_digit_system_mover(t_list *stacks, int *tab, int i_max, int mode);
 void		first_digit_calculator(t_list *stacks, int *tab, int i_max);
 void		sec_digit_calculator(t_list *stacks, int *tab, int i_max);
+void		first_digit_mover_100(t_list *stacks, int mode, int n, int i_max);
+void		second_digit_mover_100(t_list *stacks, int mode, int n, int i_max);
+
 
 //------------------------------------------------------------------------------
 //								--- Linked List  ---

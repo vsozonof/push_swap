@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:18:41 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/10/01 22:09:56 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/02 21:15:11 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	chunk_move_to_a_100(t_list *stacks)
 	// 		chunk_mover_a_100(stacks, 95, 15);
 	// 	len = ft_lstlen_b(stacks->b);
 	// }
-	chunk_digit_mvr(stacks, 95);
+	chunk_digit_mvr(stacks, 95, 15);
 }
 
 void	chunk_mover_a_100(t_list *stacks, int i_max, int n)
@@ -74,54 +74,106 @@ void	chunk_digit_mover_to_a_100(t_list *stacks, int i_max)
 	pa(stacks);
 }
 
-void	chunk_digit_mvr(t_list *stacks, int i_max)
+void	chunk_digit_mvr(t_list *stacks, int i_max, int n)
 {
-	int	*tab;
-
-	ft_add_prev_ptr_b(stacks);
-	tab = move_cheapest(stacks, i_max);
-	ft_printf("%i - %i - %i - %i \n", tab[0], tab[1], tab[2], tab[3]);
-	ft_printlst_b(stacks->b);
+	while (n > 0)
+	{
+		ft_add_prev_ptr_b(stacks);
+		pair_digit_system_handler(stacks, i_max);
+		i_max--;
+		n--;
+	}
+	ft_printlst_a(stacks->a);
 }
 
-int	*move_cheapest(t_list *stacks, int i_max)
+void	pair_digit_system_handler(t_list *stacks, int i_max)
 {
 	int	*tab;
+	int	mode;
 
 	tab = malloc(sizeof(int) * 4);
 	first_digit_calculator(stacks, tab, i_max);
 	sec_digit_calculator(stacks, tab, i_max - 1);
-	return (tab);
+	mode = cheapest_move_selector(tab);
+	pair_digit_system_mover(stacks, tab, i_max, mode);
+}
+
+void	pair_digit_system_mover(t_list *stacks, int *tab, int i_max, int mode)
+{
+	if (mode == 1)
+	{
+		first_digit_mover_100(stacks, tab[0], tab[1], i_max);
+	}
+}
+
+void	first_digit_mover_100(t_list *stacks, int mode, int n, int i_max)
+{
+	if (mode == 1)
+	{
+		while (n > 1)
+		{
+			if (n == 2 && stacks->b->index <= i_max)
+				sb(stacks, 0);
+			else
+				rb(stacks, 0);
+			n--;
+		}
+	}
+	else if (mode == 2)
+	{
+		while (n > 1)
+		{
+			rrb(stacks, 0);
+			n--;
+		}
+	}
+}
+
+void	second_digit_mover_100(t_list *stacks, int mode, int n, int i_max)
+{
+	
+}
+
+void	update_cost_after_move(t_list *stacks, int i_max, int *tab)
+{
+	
+}
+int	cheapest_move_selector(int *tab)
+{
+	if (tab[1] < tab[3] || tab[1] == tab[3])
+		return (1);
+	else
+		return (2);
 }
 
 void	first_digit_calculator(t_list *stacks, int *tab, int i_max)
 {
 	if (top_to_bot_scanner_b(stacks, i_max)
-		< bot_to_top_scanner_b(stacks, i_max))
+		< (bot_to_top_scanner_b(stacks, i_max) + 1))
 	{
 		tab[0] = 1;
 		tab[1] = top_to_bot_scanner_b(stacks, i_max);
 	}
 	else if (top_to_bot_scanner_b(stacks, i_max)
-		> bot_to_top_scanner_b(stacks, i_max))
+		> (bot_to_top_scanner_b(stacks, i_max) + 1))
 	{
 		tab[0] = 2;
-		tab[1] = bot_to_top_scanner_b(stacks, i_max);
+		tab[1] = bot_to_top_scanner_b(stacks, i_max) + 1;
 	}
 }
 
 void	sec_digit_calculator(t_list *stacks, int *tab, int i_max)
 {
 	if (top_to_bot_scanner_b(stacks, i_max)
-		< bot_to_top_scanner_b(stacks, i_max))
+		< (bot_to_top_scanner_b(stacks, i_max) + 1))
 	{
 		tab[2] = 1;
 		tab[3] = top_to_bot_scanner_b(stacks, i_max);
 	}
 	else if (top_to_bot_scanner_b(stacks, i_max)
-		> bot_to_top_scanner_b(stacks, i_max))
+		> (bot_to_top_scanner_b(stacks, i_max) + 1))
 	{
 		tab[2] = 2;
-		tab[3] = bot_to_top_scanner_b(stacks, i_max);
+		tab[3] = bot_to_top_scanner_b(stacks, i_max) + 1;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:17:03 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/30 23:22:49 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/03 03:27:47 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	chunk_move_to_b_100(t_list *stacks)
 	while (stacks->a && len > 5)
 	{
 		if (len <= 20)
+		{
+			ft_printf("zizizizi\n");
 			chunk_mover_b_100(stacks, 95, 15);
+		}
 		else if (len <= 40)
 			chunk_mover_b_100(stacks, 80, 20);
 		else if (len <= 60)
@@ -98,23 +101,5 @@ int	do_ra_or_rr(t_list *stacks, int mode)
 	else if (mode == 2 && ft_get_at_b(stacks->b, 0)
 		< ft_get_at_b(stacks->b, ft_lstlen_b(stacks->b) - 1))
 		return (1);
-	return (0);
-}
-
-int	move_optimizer_100(t_list *stacks, int mode, int n)
-{
-	t_list_b	*ptr;
-	t_list_b	*last;
-
-	ptr = stacks->b;
-	last = stacks->b;
-	(void)mode, (void)last;
-	if (!stacks->b)
-		return (0);
-	if (ft_lstlen_b(stacks->b) == 2
-		&& ptr->data < ptr->next->data && n > 2)
-		return (1);
-	if (ft_lstlen_b(stacks->b) == 3 && n > 2)
-		triple_digit_handler_b(stacks, mode);
 	return (0);
 }

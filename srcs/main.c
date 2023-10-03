@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:15 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/30 10:44:58 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/03 09:56:18 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,6 @@ int	main(int argc, char *argv[])
 	else if (ft_lstlen_a(stacks.a) == 1)
 		return (pr_error("Not enough arguments."));
 	algo_handler(&stacks);
-	// ft_printlst_a(stacks.a);
-	// ft_printlst_b(stacks.b);
-	// ft_printf("LEN A = %i - LEN B = %i\n", ft_lstlen_a(stacks.a), ft_lstlen_b(stacks.b));
-	// ft_printlst_tmp(stacks.tmp);
 	ft_freelist_tmp(stacks.tmp);
 	ft_freelist_a(stacks.a);
 	ft_freelist_b(stacks.b);

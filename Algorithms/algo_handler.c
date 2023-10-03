@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 14:37:04 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/26 07:56:18 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/03 08:24:36 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,6 @@ void	algo_handler(t_list *stacks)
 		medium_algo(stacks);
 	else if (nbrs > 5 && nbrs <= 100)
 		hard_algo(stacks);
+	else if (nbrs >= 101 && nbrs <= 500)
+		expert_algo(stacks);
 }

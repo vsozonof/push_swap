@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 09:05:51 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/10/03 02:57:31 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/03 09:56:32 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,14 +134,13 @@ void		chunk_move_to_a_100(t_list *stacks);
 void		chunk_mover_b_100(t_list *stacks, int i_max, int n);
 void		chunk_sorter_100(t_list *stacks);
 void		chunk_digit_mover_to_b_100(t_list *stacks, int i_max);
-void		top_or_bot_moving_100(t_list *stacks, int mode, int n, int i_max);
+void		top_or_bot_moving_100(t_list *stacks, int mode, int i_max);
 int			move_optimizer_100(t_list *stacks, int mode, int n);
 int			top_to_bot_scanner_a(t_list *stacks, int i_max);
 int			bot_to_top_scanner_a(t_list *stacks, int i_max);
 int			top_to_bot_scanner_b(t_list *stacks, int i_max);
 int			bot_to_top_scanner_b(t_list *stacks, int i_max);
 int			do_ra_or_rr(t_list *stacks, int mode);
-
 void		chunk_digit_mover(t_list *stacks, int i_max, int n);
 void		pair_digit_system_handler(t_list *stacks, int i_max);
 void		pair_digit_system_mover(t_list *stacks, int *tab, int i_max);
@@ -151,6 +150,11 @@ void		update_actions_cost(t_list *stacks, int i_max, int *tab, int mode);
 void		digit_actions_calculator_a(int *tab, int n1, int n2);
 void		digit_actions_calculator_b(int *tab, int n1, int n2);
 
+void		expert_algo(t_list *stacks);
+void		chunk_move_to_b_500(t_list *stacks, int len);
+void		chunk_mover_b_500(t_list *stacks, int i_max, int n);
+void		chunk_digit_mover_to_b_500(t_list *stacks, int i_max);
+void		top_or_bot_moving_500(t_list *stacks, int mode, int i_max);
 
 //------------------------------------------------------------------------------
 //								--- Linked List  ---

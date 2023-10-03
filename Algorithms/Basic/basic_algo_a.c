@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 10:17:16 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/09/29 21:44:55 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/03 08:06:43 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,26 +68,22 @@ void	triple_digit_sorter_spe(t_list *stacks, int n1, int n2, int n3)
 {
 	if (n1 > n2 && n2 > n3 && n1 > n3)
 	{
-		ss(stacks);
+		sa(stacks, 0);
 		rra(stacks, 0);
 	}
 	else if (n1 > n2 && n2 < n3 && n1 > n3)
-		rr(stacks);
+		ra(stacks, 0);
 	else if (n1 > n2 && n2 < n3 && n1 < n3)
-		ss(stacks);
+		sa(stacks, 0);
 	else if (n1 < n2 && n2 > n3 && n1 > n3)
 	{	
-		if (ft_lstlen_b(stacks->b) > 2)
-			rra(stacks, 0);
-		else
-			rrr(stacks);
+		rra(stacks, 0);
 	}
 	else if (n1 < n2 && n2 > n3 && n1 < n3)
 	{
-		ss(stacks);
+		sa(stacks, 0);
 		ra(stacks, 0);
 	}
-	else
-		sb(stacks, 0);
+	sb(stacks, 0);
 	return ;
 }

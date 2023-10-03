@@ -6,7 +6,7 @@
 /*   By: vsozonof <vsozonof@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 19:17:03 by vsozonof          #+#    #+#             */
-/*   Updated: 2023/10/03 03:27:47 by vsozonof         ###   ########.fr       */
+/*   Updated: 2023/10/03 08:46:57 by vsozonof         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,12 @@ void	chunk_move_to_b_100(t_list *stacks)
 	int	len;
 
 	len = ft_lstlen_a(stacks->a);
+	if (len < 100)
+		return (chunk_mover_b_100(stacks, (len - 5), (len - 5)));
 	while (stacks->a && len > 5)
 	{
 		if (len <= 20)
-		{
-			ft_printf("zizizizi\n");
 			chunk_mover_b_100(stacks, 95, 15);
-		}
 		else if (len <= 40)
 			chunk_mover_b_100(stacks, 80, 20);
 		else if (len <= 60)
@@ -57,7 +56,7 @@ void	chunk_digit_mover_to_b_100(t_list *stacks, int i_max)
 	{
 		while (n1 > 1)
 		{
-			top_or_bot_moving_100(stacks, 1, n1, i_max);
+			top_or_bot_moving_100(stacks, 1, i_max);
 			n1--;
 		}
 	}
@@ -65,16 +64,15 @@ void	chunk_digit_mover_to_b_100(t_list *stacks, int i_max)
 	{
 		while (n2 > 1)
 		{
-			top_or_bot_moving_100(stacks, 2, n2, i_max);
+			top_or_bot_moving_100(stacks, 2, i_max);
 			n2--;
 		}
 	}
 	pb(stacks);
 }
 
-void	top_or_bot_moving_100(t_list *stacks, int mode, int n, int i_max)
+void	top_or_bot_moving_100(t_list *stacks, int mode, int i_max)
 {
-	(void)n, (void)i_max;
 	if (mode == 1)
 	{	
 		if (i_max == 20 && do_ra_or_rr(stacks, mode))
